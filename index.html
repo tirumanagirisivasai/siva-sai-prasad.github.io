@@ -896,8 +896,11 @@
     <script src="./packages/js/swiper-bundle.min.js"></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="./packages/js/main.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./packages/js/main.js"></script><script type="module">
+  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+  emailjs.init('BmvXggRQWOACAUvOz'); // your actual EmailJS public key here
+</script>
+
 
 </body>
 
