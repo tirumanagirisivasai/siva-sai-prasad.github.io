@@ -214,7 +214,7 @@ themeButton.addEventListener("click", () => {
 // Automating the email
 // Initialize EmailJS (once the page is ready)
 (function() {
-  emailjs.init('YOUR_USER_ID'); // replace 'YOUR_USER_ID' with your actual EmailJS public key
+  emailjs.init('BmvXggRQWOACAUvOz'); // replace 'YOUR_USER_ID' with your actual EmailJS public key
 })();
 
 // Get the form element
@@ -225,7 +225,7 @@ contactForm.addEventListener('submit', function(event) {
   event.preventDefault(); // prevent the page from reloading
 
   // Send the form using EmailJS
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+  emailjs.sendForm('service_pmt35vc', 'template_xfr1p3b', this)
       .then(function(response) {
           alert('✅ Message sent successfully!');
           contactForm.reset(); // clear the form after sending
