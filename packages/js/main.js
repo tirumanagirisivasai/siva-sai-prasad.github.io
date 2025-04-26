@@ -210,3 +210,27 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// Automating the email
+// Initialize EmailJS (once the page is ready)
+(function() {
+  emailjs.init('YOUR_USER_ID'); // replace 'YOUR_USER_ID' with your actual EmailJS public key
+})();
+
+// Get the form element
+const contactForm = document.querySelector('.contact__form');
+
+// Listen to form submission
+contactForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent the page from reloading
+
+  // Send the form using EmailJS
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(function(response) {
+          alert('✅ Message sent successfully!');
+          contactForm.reset(); // clear the form after sending
+      }, function(error) {
+          alert('❌ Failed to send message. Please try again.');
+          console.error('EmailJS Error:', error);
+      });
+});
