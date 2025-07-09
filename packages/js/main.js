@@ -1,4 +1,6 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
+import * as emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close");
@@ -213,9 +215,7 @@ themeButton.addEventListener("click", () => {
 
 // Automating the email
 // Initialize EmailJS (once the page is ready)
-(function() {
-  emailjs.init('YOUR_USER_ID'); // replace 'YOUR_USER_ID' with your actual EmailJS public key
-})();
+emailjs.init('BmvXggRQWOACAUvOz');
 
 // Get the form element
 const contactForm = document.querySelector('.contact__form');

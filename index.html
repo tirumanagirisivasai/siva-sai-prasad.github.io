@@ -12,7 +12,7 @@
         
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="./packages/css/styles.css">
-
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <title>Siva Sai Prasad Tirumanagiri</title>
     </head>
     <body>
@@ -192,7 +192,7 @@
                                        <span class="skills__number">70%</span>
                                    </div>
                                    <div class="skills__bar">
-                                       <span class="skills__percentage skills__tab"></span>
+                                       <span class="skills__percentage skills__pbi"></span>
                                    </div>
                                </div>
                                <div class="skills__data">
@@ -528,7 +528,7 @@
         <div class="services__content">
             <div>
                 <i class="uil uil-money-bill skills__icon"></i>
-                <h3 class="services__title">Machine Learning<br> </h3>
+                <h3 class="services__title">Machine Learning/Data Science<br> </h3>
             </div>
             <span class="button button--flex button--small button--link services__button">
                 View more
@@ -589,14 +589,13 @@
 
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>I create data pipelines</p>
+                            <p>I can create data pipelines</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div> 
-  
-       
+        
         </div>
         </section>
         <!--==================== PORTFOLIO ====================-->
@@ -616,7 +615,7 @@
                     <h3 class="portfolio__title">Modern Dashboard</h3>
                     <p class="portfolio__description">Data analitical dashboard adaptable to all devices, 
                         with ui components and animated interactions.</p>
-                    <a href="#" class="button button--flex button--small portfolio__button">
+                    <a href="C:\Users\sivas\Downloads\bank_marketing_project.pdf" class="button button--flex button--small portfolio__button" >
                         Demo
                         <i class="uil uil-arrow-right button__icon"></i>
                     </a>
@@ -640,20 +639,6 @@
             </div>
 
             <!--==================== PORTFOLIO 3 ====================-->
-        
-            <div class="portfolio__content grid swiper-slide">
-                <img src="./packages/images/portfolio2.png" alt="" class="portfolio__img">
-
-                <div class="portfolio_">
-                    <h3 class="portfolio__title">Brand Design</h3>
-                    <p class="portfolio__description">Tesla Clone is adaptable to all devices, with 
-                        ui components and animated interactions.</p>
-                    <a href="#" class="button button--flex button--small portfolio__button">
-                        Demo
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-            </div>
                 </div>
 
             <!-- add arrows-->
@@ -896,8 +881,19 @@
     <script src="./packages/js/swiper-bundle.min.js"></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="./packages/js/main.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="module" src="./packages/js/main.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "BmvXggRQWOACAUvOz",
+            });
+        })();
+    </script>
+      
+    
 
 </body>
 
